@@ -1,2 +1,2 @@
 # sti-frontend
-Mt First Frontend Application
+My First Frontend Application
