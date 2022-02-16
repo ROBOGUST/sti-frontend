@@ -122,15 +122,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
   resetButton.addEventListener('click', resetBoard);
 });
-
-
-
-// const { type } = require("express/lib/response");
-
-// console.log("Initializing game");
-// setTimeout(age, 3000)
-
-// function age(){
-//   console.log("Aging game")
-//   setTimeout(age, 3000)
-// }
