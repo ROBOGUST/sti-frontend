@@ -2,3 +2,13 @@
   padding: 0;
   margin: 0;
 }
+
+body {
+  text-align: center;
+  justify-content: center;
+  
+}
+
+img.tableLogo {
+  max-width: 20px;
+}
