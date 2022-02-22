@@ -6,7 +6,12 @@
 body {
   text-align: center;
   justify-content: center;
-  
+}
+header {
+  background: rgb(86, 86, 255);
+}
+h1 {
+  font-size: 3.5em;
 }
 
 img.tableLogo {
