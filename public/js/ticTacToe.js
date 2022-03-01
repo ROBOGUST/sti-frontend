@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const playerDisplay = document.querySelector('.display-player');
   const resetButton = document.querySelector('#reset');
   const announcer = document.querySelector('.announcer');
-  const resetScore = document.querySelector('#resetScore')
+  const resetScoreButton = document.querySelector('#resetScore')
 
   let pointsX = 0;
   let pointsO = 0;
@@ -134,12 +134,13 @@ window.addEventListener('DOMContentLoaded', () => {
       tile.addEventListener('click', () => userAction(tile, index));
   });
 
-//   function resetPoints(pointsX, pointsO){
-//     pointsX === 0;
-//     pointsO === 0;
-//     return pointsX, pointsO;
-//   }
+  function resetPoints(){
+    pointsX = 0;
+    pointsO = 0;
+    pointsXElement.innerHTML=pointsX;
+    pointsOElement.innerHTML=pointsO;
+  }
 
   resetButton.addEventListener('click', resetBoard);
-  resetButton.addEventListener('click', resetPoints);
+  resetScoreButton.addEventListener('click', resetPoints);
 });
