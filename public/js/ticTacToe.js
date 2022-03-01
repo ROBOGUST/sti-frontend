@@ -3,6 +3,16 @@ window.addEventListener('DOMContentLoaded', () => {
   const playerDisplay = document.querySelector('.display-player');
   const resetButton = document.querySelector('#reset');
   const announcer = document.querySelector('.announcer');
+  const resetScore = document.querySelector('#resetScore')
+
+  let pointsX = 0;
+  let pointsO = 0;
+
+  let pointsXElement = document.getElementById('pointsX')
+  pointsXElement.innerHTML=0;
+  let pointsOElement = document.getElementById('pointsO')
+  pointsOElement.innerHTML=0;
+
 
   let board = ['', '', '', '', '', '', '', '', ''];
   let currentPlayer = 'X';
@@ -61,9 +71,13 @@ window.addEventListener('DOMContentLoaded', () => {
       switch(type){
           case PLAYERO_WON:
               announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+              pointsXElement.innerHTML=pointsX;
+              pointsOElement.innerHTML=++pointsO;
               break;
           case PLAYERX_WON:
               announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+              pointsXElement.innerHTML=++pointsX;
+              pointsOElement.innerHTML=pointsO;
               break;
           case TIE:
               announcer.innerText = 'Tie';
@@ -120,5 +134,12 @@ window.addEventListener('DOMContentLoaded', () => {
       tile.addEventListener('click', () => userAction(tile, index));
   });
 
+//   function resetPoints(pointsX, pointsO){
+//     pointsX === 0;
+//     pointsO === 0;
+//     return pointsX, pointsO;
+//   }
+
   resetButton.addEventListener('click', resetBoard);
+  resetButton.addEventListener('click', resetPoints);
 });

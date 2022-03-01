@@ -4,7 +4,7 @@
 }
 .backround {
   background-color: #12181b;
-  height: 100vh;
+  height: 150vh;
   padding-top: 1px;
 }
 .title {
@@ -13,17 +13,21 @@
   font-size: 40px;
   margin-top: 1%;
 }
-.playerScoreX {
+.playerScore {
   color: white;
   text-align: left;
   font-size: 40px;
   margin-left: 5%;
 }
-.playerScoreY {
-  color: white;
-  text-align: right;
-  font-size: 40px;
-  margin-right: 5%;
+#playerX {
+  list-style-type: none;
+  text-align: left;
+  margin-left: 10%;
+}
+#playerO {
+  list-style-type: none;
+text-align: right;
+  margin-right: 15%;
 }
 .display {
   color: white;
